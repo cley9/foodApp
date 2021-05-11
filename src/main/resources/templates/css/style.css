@@ -1,0 +1,122 @@
+:root{
+  --bgcolor:#58D68D; /*rgba(118, 215, 196);*/
+  --hovercolor:rgb(142, 68, 173);
+  --width-collapsed:60px;
+}
+#sidemenu{
+  background-color: var(--bgcolor);
+  color: white;
+  position: fixed; /* se mantinne quieto    */
+  height: 98%;
+  left:0;
+  top:0;
+}
+#sidemenu #header #title{
+  overflow: hidden; /* IDEA: para que no se desborde oculta*/
+}
+/* IDEA:  hamburger     desisivo*/
+#sidemenu #header #menu-btn{
+  padding: 10px;
+  width: var(--width-collapsed);
+}
+.menu-expanded #header #title{
+width: calc(100% - 10px);
+margin-right: 80px;
+}
+.menu-collapsed #header #title {
+width: 0;
+height: 0;
+padding: 0;
+margin: 0;
+}
+.style_icon_h:hover {
+  background-color: var(--hovercolor);
+}
+.height_container{
+  height: 50px;
+}
+.icon_size{
+  font-size:30px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* IDEA: style="background: url('img/Complejo-Valle-Grande.jpg')no-repeat;background-size: cover;" */
+  body{
+    /* IDEA:
+    background-image: url("https://mdbootstrap.com/img/Photos/Horizontal/Nature/full page/img(20).jpg");
+     */
+     /* The image used */
+     background-image:  url("../img/Complejo-Valle-Grande.jpg");
+     background-repeat: no-repeat;
+     background-size: cover;
+
+/* Full height */
+/* Center and scale the image nicely
+height: 100%;
+
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+*/
+
+  }
+
+/* IDEA: ----------------------------------desing cellfhon xd_ */
+
+.desing--cellfhon{
+   background-color:#58D68D;
+   /*opacity:0.9;*/
+
+}
+.btn--exit{
+  background-color:#F4D03F;
+
+}
+
+
+  /*-----------------------------------style footer*/
+
+
+  .c{
+    height:600px;
+    width: 700px;
+   }
+   
+   .c:hover{
+     color:#FDFDFD;
+   
+   }
+   
+   
+   .cn{
+     height:600px;
+     width: 700px;
+   }
+   
+   .cn i:hover{
+     /*
+     //background-color: #4AF997;*/
+   color: :#EE5228;
+   }
+   
+   
+   #btn_ico {
+   background:#EE7358;
+   }
+  /*-----------------------------------style footer fin ------------*/
+   
+
+.search--placeholder {
+  background-color: transparent;
+}
+ 
