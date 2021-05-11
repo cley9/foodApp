@@ -1,4 +1,4 @@
-package com.DeliveryRestaurante.appweb.repository;
+package edu.utp.chamcha.repository;
 
 import com.DeliveryRestaurante.appweb.model.Producto;
 

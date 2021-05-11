@@ -1,5 +1,4 @@
-package com.DeliveryRestaurante.appweb.model;
-
+package edu.utp.chamcha.model;
 import javax.persistence.Entity;
 import javax.persistence.Table;
 import javax.persistence.Id;

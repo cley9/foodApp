@@ -1,4 +1,4 @@
-package com.DeliveryRestaurante.appweb.model;
+package edu.utp.chamcha.model;
 
 import javax.validation.constraints.NotNull;
 

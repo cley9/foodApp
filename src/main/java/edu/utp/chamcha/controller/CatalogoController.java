@@ -1,4 +1,4 @@
-package com.DeliveryRestaurante.appweb.controller;
+package edu.utp.chamcha.controller;
 
 
 import org.springframework.stereotype.Controller;
