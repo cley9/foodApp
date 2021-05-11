@@ -1,0 +1,184 @@
+<!doctype html>
+<html th:fragment="layout (template, menu)">
+
+<head>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link th:rel="stylesheet" th:href="@{/webjars/bootstrap/css/bootstrap.min.css}" />
+  <link th:rel="stylesheet" th:href="@{/webjars/bootstrap/css/bootstrap.min-jsf.css}" />
+  <link th:rel="stylesheet" th:href="@{/webjars/bootstrap/css/bootstrap-jsf.css}" />
+  <link th:rel="stylesheet" th:href="@{/webjars/font-awesome/css/all.css} " />
+  <link th:rel="stylesheet" th:href="@{/webjars/bootstrap-datepicker/css/bootstrap-datepicker.css}" />
+  <link th:rel="stylesheet" th:href="@{/webjars/bootstrap-datepicker/css/bootstrap-datepicker.standalone.css}" />
+  <!--         -->
+  <link th:rel="stylesheet" th:href="@{/webjars/bootstrap-icons@1.4.0/font/bootstrap-icons.css}" />
+  <link th:rel="stylesheet" th:href="@{/resources/css/style.css}" />
+
+</head>
+<body>
+  <header class=" d-none d-sm-none d-md-block">
+    <div class="container-fluid  d-flex justify-content-end pt-3">
+      <div class=" row mb-3 ">
+        <div class=" col-1 ">
+      <div class="pt-2 rounded-circle border border-dark text-center bg-dark " style="height: 55px; width:55px;opacity:0.8">
+        <img src="../img/logoUsuario.gif" class="" height="36px">
+  
+      </div>
+      </div>
+    </div>
+    </div>
+  
+    <div id="sidemenu" class="menu-collapsed shadow rounded-3 ">
+      <div id="header" class=" d-flex justify-content-center  pt-0 ">
+  
+        <div id="title" class=" row mb-3 "style="margin-top:10px;">
+            <div class=" col-6  d-flex justify-content-end ">
+            <div class="pt-2 rounded-circle border border-dark text-center bg-dark " style="height: 55px; width:55px; opacity:0.8">
+              <img src="../img/LOGO_RESTAURANTE.gif" class="" height="30px">
+            </div>
+        </div>
+      </div>
+        <div id="menu-btn" class="navbar-toggler rounded-3 navbar navbar-dark  justify-content-center    " type="button">
+          <button class="navbar-toggler  bg-primary" id="menu-btn" type="button">
+            <span class="navbar-toggler-icon "></span>
+          </button>
+        </div>
+      </div>
+      <hr class="my-0 bg-dark pt-0 mb-0">
+      <div id="header">
+        <div class=" text-center  pt-2 mb-2" id="title">
+          <i class="bi bi-person-circle " style=" font-size:70px; "></i>
+          <h3 class="text-light ">Jose</h3>
+        </div>
+          <a href="Menu_Carta" class="nav-link active  style_icon_h height_container pt-0" aria-current="page">
+            <div class="d-flex justify-content-between align-items-center text-light">
+              <h6 class=" text-left" id="title">Menu a la Carta </h6>
+              <h6 class=" text-end " id="profile"><i class="bi bi-calendar2-plus icon_size" ></i>
+                <hr class="my-1 bg-danger mb-0 ">
+              </h6>
+          </div>
+        </a>
+  
+  
+        <a href="Bandeja_Entrada" class="nav-link active  pt-0 style_icon_h height_container" aria-current="page">
+  
+          <div class="d-flex justify-content-between align-items-center text-light ">
+            <h6 class=" text-left" id="title">Bandeja de Entrada </h6>
+            <h6 class=" text-end" id="profile"><i class="bi bi-bell icon_size" ></i>
+              <hr class="my-1 bg-danger mb-0 " >
+            </h6>
+          </div>
+  
+        </a>
+  
+        
+      <a href="Chat" class="nav-link active  pt-0 style_icon_h height_container" aria-current="page">
+        <div class="d-flex justify-content-between align-items-center text-light">
+          <h6 class=" text-left" id="title">Chatear con Nosotros </h6>
+          <h6 class=" text-end" id="profile"><i class="bi bi-chat-dots icon_size"></i>
+            <hr class="my-1 bg-danger mb-0 ">
+          </h6>
+        </div>
+      </a>
+
+
+      <a href="cupon" class="nav-link active  pt-0  style_icon_h height_container" aria-current="page">
+        <div class="d-flex justify-content-between align-items-center text-light ">
+          <h6 class=" text-left" id="title">Cupones </h6>
+          <h6 class=" text-end" id="profile"><i class="bi bi-bookmark-star icon_size"></i>
+            <hr class="my-1 bg-danger mb-0 ">
+          </h6>
+        </div>
+      </a>
+
+      <a href="beneficios" class="nav-link active pt-0 style_icon_h height_container" aria-current="page">
+        <div class="d-flex justify-content-between align-items-center text-light">
+          <h6 class=" text-left" id="title">Beneficios </h6>
+          <h6 class=" text-end " id="profile"><i class="bi bi-star icon_size"></i>
+            <hr class="my-1 bg-danger mb-0 ">
+          </h6>
+        </div>
+      </a>
+
+   
+
+        <div class="text-center  pt-3 mb-0 " id="title">
+          <a href="#" class="btn btn--exit rounded-pill  text-light">Cerrar Sesion</a>
+        </div>
+      </div>
+    </div>
+  
+  </header>
+  
+    
+
+
+    <!--        ---------------------------------------------------------------------------------------------------------------------------------->
+
+
+
+
+
+
+
+
+    
+    <div class="container-fluid">
+      <div class="container xd-container">
+  
+        <th:block th:include="${template}" />
+    </div>
+  </div>
+
+    <!--        ---------------------------------------------------------------------------------------------------------------------------------->
+
+    <footer class="pt-4 foot " style="background-color:#2D2E2B; margin-top: 400px; ;">
+      <div class="container text-muted">
+        <div class="row ">
+          <div class="col-4 col-md  ">
+            <a class="navbar-brand" href="#"><img src="../img/LOGO_RESTAURANTE.gif" class="img-fluid " width="130px" height="80px" alt=""></a>
+    
+          </div>
+          <div class="col-4 col-md  d-flex justify-content-center ">
+            <h5>Contáctanos</h5>
+    
+          </div>
+          <div class="col-4 col-md ">
+            <h5>Nosotros</h5>
+    
+          </div>
+          <div class="col-12 text-center col-md mb-2">
+            <h5>Redes Sociales</h5>
+    
+            <a class="" href="#" style=" color:#070707; font-size:40px;"><i class="bi bi-whatsapp c"></i></a>
+    
+            <a class="" href="#" style=" color:#070707; font-size:40px;"><i class="bi bi-facebook c"></i></a>
+            <a class="" href="#" style=" color:#070707; font-size:40px;"><i class="bi bi-instagram c"></i></a>
+    
+          </div>
+          <hr class=" d-block d-sm-block d-md-none">
+          <div class="row-fluid ">
+            <div class="text-center ">
+              <small class="d-block mb-3 text-muted h6"> ©2021 copyright La Chamcha </small>
+            </div>
+          </div>
+    
+        </div>
+    </footer>
+    
+   
+
+    
+
+    <script th:src="@{/webjars/jquery/jquery.min.js}"></script>
+    <script th:src="@{/webjars/jquery-ui/jquery-ui.min.js}"></script>
+    <script th:src="@{/webjars/bootstrap/js/bootstrap.min.js}"></script>
+    <script th:src="@{/webjars/bootstrap-datepicker/js/bootstrap-datepicker.min.js}"></script>
+    <script th:src="@{/webjars/jquery.inputmask/jquery.inputmask.min.js}"></script>    
+
+  </body>
+  
+  </html>
