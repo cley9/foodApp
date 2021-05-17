@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+
+<html xmlns:th="https://www.thymeleaf.org" 
+    th:replace="~{fragments/layout :: layout (~{::body},'catalogo')}">
+
+<head>
+  <title>Catalogo</title>
+  <link th:rel="stylesheet" th:href="@{/webjars/bootstrap/css/bootstrap.min.css}" />
+  <link th:rel="stylesheet" th:href="@{/webjars/font-awesome/css/all.css} " />
+  <script th:src="@{/webjars/jquery/jquery.min.js}"></script>
+  <script th:src="@{/webjars/jquery-ui/jquery-ui.min.js}"></script>
+  <script th:src="@{/webjars/bootstrap/js/bootstrap.min.js}"></script>
+</head>
+
+<body>
+
+
+
+   
+<div class="container"><br>
+  <div class="row">
+        <div class="col-md-12">
+              <table class="table table-bordered rounded-3 text-center table-hover">
+        <thead class="table-dark">
+        <th>id</th>
+        <th>Menu</th>
+    <th>Precio</th>
+     <th>Foto</th>
+        <th>Fecha</th>
+        </thead>
+        <tbody>
+          <tr class="text-light"   th:each="producto : ${productos}">
+            <td><p th:text="${producto.id}" /></td>
+            <td><p th:text="${producto.descripcion}" /></td>
+          <td>  <p th:text="${producto.precio}" /></td>
+          <td>
+            <img class="img-responsive" src="../static/catalogo/${producto.imageFileName}"  th:src="@{'/catalogo/'+${producto.imageFileName}}" style="width: 80px;"/>
+          </td>
+          <td> <p th:text="${producto.status}" /></td>
+          </tr>
+        </tbody>
+
+</table>
+</div>
+</div>
+</div>
+<div class="" style="margin-top:140px;"></div>
+
+
+
+
+
+</body>
+
+</html>
