@@ -18,5 +18,11 @@ public class Usuario {
     @Column(name = "user_id")/*para qe salgan iguales */
     private String userID;
     private String password;
+    public Object getPassword() {
+        return null;
+    }
+    public String getUserID() {
+        return null;
+    }
 
 }
