@@ -7,6 +7,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--        
 
   <link th:rel="stylesheet" th:href="@{/webjars/bootstrap/css/bootstrap.min.css}" />
   <link th:rel="stylesheet" th:href="@{/webjars/bootstrap/css/bootstrap.min-jsf.css}" />
@@ -14,38 +15,18 @@
   <link th:rel="stylesheet" th:href="@{/webjars/font-awesome/css/all.css} " />
   <link th:rel="stylesheet" th:href="@{/webjars/bootstrap-datepicker/css/bootstrap-datepicker.css}" />
   <link th:rel="stylesheet" th:href="@{/webjars/bootstrap-datepicker/css/bootstrap-datepicker.standalone.css}" />
-  <!--        
-  <link th:rel="stylesheet" th:href="@{/webjars/bootstrap-icons@1.4.0/font/bootstrap-icons.css}" /> 
-   
-
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css">
-  <link rel="shortcut icon" type="image/x-icon" href="img\icon_user.PNG" />
-  <link rel="stylesheet" href="../css/style.css">
+ 
 -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 <link rel="shortcut icon" type="image/x-icon" href="img\icon_user.PNG" />
 <link rel="stylesheet" href="../css/style.css">
 <link rel="stylesheet" href="../css/whats-1.css">
 
 
-
-<!--
-<link rel="stylesheet" href="../css/style.css">
-
-  <link th:rel="stylesheet" th:href="@{/resources/static/css/style.css}" />
-  <link th:rel="stylesheet" th:href="@{/resources/css/whats-1.css}" />
--->
-
 </head>
 <body>
-
-
-
-
-
-
 
   <header class=" d-none d-sm-none d-md-block">
     <div class="container-fluid  d-flex justify-content-end pt-3">
@@ -91,7 +72,7 @@
         </a>
   
   
-        <a href="/cliente/Bandeja_Entrada" class="nav-link active  pt-0 style_icon_h height_container" aria-current="page">
+        <a href="/catalogo/index" class="nav-link active  pt-0 style_icon_h height_container" aria-current="page">
   
           <div class="d-flex justify-content-between align-items-center text-light ">
             <h6 class=" text-left" id="title">Bandeja de Entrada </h6>
@@ -129,21 +110,21 @@
             </h6>
           </div>
         </a>
-      <!--
-      <a href="ayuda.html" class="nav-link active pt-0 style_icon_h height_container"  href="help.html" id="help_items_" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+     
+      <a  class="nav-link active pt-0 style_icon_h height_container"  href="help" id="help_items_" role="button" data-bs-toggle="dropdown" aria-expanded="false">
           <div class="d-flex justify-content-between align-items-center text-light">
             <h6 class=" text-left dropdown-toggle" id="title">Ayuda </h6>
             <h6 class=" text-end" id="profile"><i class="bi bi-question-circle icon_size"></i>
               <hr class="my-1 bg-danger mb-0 ">
             </h6>
           </div>
-        </a>
+        </a> 
         <ul class="dropdown-menu" aria-labelledby="help_items_">
-          <li><a class="dropdown-item" href="contactenos.html">Contáctenos</a></li>
+          <li><a class="dropdown-item" href="contactenos">Contáctenos</a></li>
           <li><a class="dropdown-item" href="#">Pregunta Frecuenta</a></li>
           <li><a class="dropdown-item" href="#">Términos y Condiciones</a></li>
         </ul>
-      -->
+   <!--    -->
   
         <div class="text-center  pt-3 mb-0 " id="title">
           <a href="#" class="btn btn--exit rounded-pill  text-light">Cerrar Sesion</a>
@@ -181,7 +162,7 @@
                    </div>
                </div></a>
              </li><hr class="my-0 bg-dark">
-             <li class="nav-item " ><a href="/cliente/Bandeja_Entrada" class="nav-link active" aria-current="page" >
+             <li class="nav-item " ><a href="/catalogo/index" class="nav-link active" aria-current="page" >
                <div class="card-body-xs justify-content-between align-items-center ">
                <div class="d-flex justify-content-between align-items-center text-light" >
                  <h6 class=" text-left">Bandeja de Entrada </h6>
@@ -214,14 +195,14 @@
                </div></a>
              </li><hr class="my-0 bg-dark">
   
-  <!-- 
+  
              <li class="nav-item dropdown ">
-               <a class="nav-link  d-flex justify-content-between align-items-center text-light  " href="help.html" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+               <a class="nav-link  d-flex justify-content-between align-items-center text-light  " href="help" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                  <h6 class=" text-left dropdown-toggle">Ayuda </h6>
                  <h6 class=" text-end"><i class="bi bi-question-circle " style=" font-size:20px;"></i></h6>
                </a>
                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                 <li><a class="dropdown-item" href="contactenos.html">Contáctenos</a></li>
+                 <li><a class="dropdown-item" href="contactenos">Contáctenos</a></li>
                  <li><a class="dropdown-item" href="#">Pregunta Frecuenta</a></li>
                  <li><a class="dropdown-item" href="#">Términos y Condiciones</a></li>
   
@@ -229,7 +210,7 @@
              </li><hr class="my-0 bg-dark">
   
   
-            -->
+            
 
   
   
@@ -245,11 +226,11 @@
   </header>
   
   <!-- IDEA: -------------------item end -->
-  <section>
+  <section><br><br><br>
     <div class="container text-center h-100 pt-4 d-flex justify-content-center align-items-center">
         <div class="col-8 col-md-5 ">
             <form action="" id="form" class="">
-              <input type="search" name="busqueda" id="id_search" class=" input-icono form-control me-2 rounded-pill   " placeholder="Menu a buscarr..." style="background-color:transparent;/*opacity:0.5 ;*/ margin-top: 120px;" >
+              <input type="search" name="busqueda" id="id_search" class=" input-icono form-control me-2 rounded-pill   " placeholder="Menu a buscarr..." style="background-color:transparent; " >
   
             </form>
               </div>
@@ -258,6 +239,21 @@
   <!-- IDEA: -------------------item end -->
   
   
+
+
+
+
+    <!--        ---------------------------------------------------------------------------------------------------------------------------------->
+
+
+    
+    <div class="container-fluid">
+      <div class="container xd-container">
+  
+        <th:block th:include="${template}" />
+    </div>
+  </div>
+
   <script type="text/javascript">
     const btn = document.querySelector('#menu-btn');
     const menu = document.querySelector('#sidemenu');
@@ -270,74 +266,9 @@
   
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     <!--        ---------------------------------------------------------------------------------------------------------------------------------->
 
-
-
-
-
-
-
-
-    
-    <div class="container-fluid">
-      <div class="container xd-container">
-  
-        <th:block th:include="${template}" />
-    </div>
-  </div>
-
-
-
-    <!--        ---------------------------------------------------------------------------------------------------------------------------------->
-
-    <footer class="pt-4 foot " style="background-color:#2D2E2B; margin-top: 400px; ;">
+    <footer class="pt-4 foot  " style="background-color:#2D2E2B; margin-top: 400px; ">
       <div class="container text-muted">
         <div class="row ">
           <div class="col-4 col-md  ">
@@ -373,20 +304,23 @@
     
    
 
-    <!-- 
-      es para el boton de menu
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
-
-    -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
-
-
+<script>
+  $('.input-group.date').datepicker({
+    autoclose: true,
+    todayHighlight: true
+  });
+</script>
+<script>
+  $(":input").inputmask();
+</script>
+<!-- 
     <script th:src="@{/webjars/jquery/jquery.min.js}"></script>
     <script th:src="@{/webjars/jquery-ui/jquery-ui.min.js}"></script>
     <script th:src="@{/webjars/bootstrap/js/bootstrap.min.js}"></script>
     <script th:src="@{/webjars/bootstrap-datepicker/js/bootstrap-datepicker.min.js}"></script>
     <script th:src="@{/webjars/jquery.inputmask/jquery.inputmask.min.js}"></script>    
-
+  -->
   </body>
   
   </html>
