@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+
+<html xmlns:th="https://www.thymeleaf.org" 
+    th:replace="~{fragments/layout :: layout (~{::body},'Administrador')}">
+    <link rel="stylesheet" href="style_admin.css">
+<body>
+  <br><br><br><br>
+  <section class="form-register">
+    <h4>Formulario Registro</h4>
+    <input class="controls" type="text" name="nombres" id="nombres" placeholder="Ingrese su Nombre">
+    <input class="controls" type="text" name="apellidos" id="apellidos" placeholder="Ingrese su Apellido">
+    <input class="controls" type="email" name="correo" id="correo" placeholder="Ingrese su Correo">
+	<input class="controls" type="direccion" name="direccion" id="direccion" placeholder="Ingrese su direccion">
+	<input class="controls" type="password" name="correo" id="correo" placeholder="Ingrese su Contraseña">
+    <p>Estoy de acuerdo con <a href="#">Terminos y Condiciones</a></p>
+    <input class="botons" type="submit" value="Registrar">
+    
+  </section>
+
+
+              
+  
+<!-- COMBAK: ---------------------------------------------------------------- -->
+
+
+</body>
+
+</html>
