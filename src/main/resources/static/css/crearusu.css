@@ -1,0 +1,51 @@
+.principal-crearCuenta{
+    height: 100vh;
+}
+
+.logo-usu{
+    position: absolute;
+    right: 2rem;
+}
+
+button.bot-usu{
+    width: 54px; 
+    height: 54px;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, .6);
+}
+
+div.menu-usu{
+    margin-left: -100px;
+}
+
+.logo-chamcha{
+    position: absolute;left: 2rem;
+}
+.logo-chamcha > a{ 
+    width: 70px; 
+    height: 70px;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, .6);
+}
+
+.logo-crearCuenta{
+    width: 100px;
+    height: 100px;
+    background-color: rgba(0, 0, 0, .7);
+}
+.logo-crearCuenta img{
+    width: 70%;
+    height: 70%;
+}
+
+.input-direc{
+    background-color: transparent !important;
+}
+
+input.input-direc::placeholder{
+    color: white;
+}
+
+
+
+

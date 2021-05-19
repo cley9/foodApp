@@ -4,7 +4,17 @@
     th:replace="~{fragments/layout :: layout (~{::body},'catalogo')}">
 
 <head>
+  <link rel="stylesheet" href="css/carta.css">
+  <link rel="stylesheet" href="css/index.css">
+
+  <link rel="stylesheet" href="css/crearusu.css">
+
+  <link rel="stylesheet" href="css/inicioSesion.css">
+  <link rel="stylesheet" href="css/principal.css">
+
+
   <title>Catalogo</title>
+  
 </head>
 
 <body>
@@ -12,36 +22,241 @@
 
 
 
+<div class="container">
+  <div class="row">                
+    <div class="col-sm-8 col-lg-5 mx-auto mt-5 text-center ">
+        <div class="container p-4 caja-comida">
+            <div class="row "  th:each="producto : ${productos}">
+                <div class="col-5">
+                    <img class="img-responsive" src="../static/catalogo/${producto.imageFileName}"  th:src="@{'/catalogo/'+${producto.imageFileName}}" style="width: 80px;" >
+                </div>
+                <div class="col-7 text-light">
+                    <h4>Fuente de Aji de gallina para 2 personas</h4>
+                    <a class="btn col-lg-8 text-center text-light p-1 mt-3 boton-caja">                                    
+                        <span>Agregar</span>                                    
+                        <span>s./ <p th:text="${producto.precio}"></p> </span>      
+                    </a>
+                </div>
+            </div>
+        </div>                
+    </div>
+</div>  
+</div>
 
 
-   
-<div class="container"><br>
-  <div class="row">
-        <div class="col-md-12">
-              <table class="table table-bordered rounded-3 text-center table-hover">
-        <thead class="table-dark">
-        <th>id</th>
-        <th>Menu</th>
-        <th>Precio</th>
-        <th>Foto</th>
-        <th>Fecha</th>
-        </thead>
-        <tbody>
-          <tr class="text-light"   th:each="producto : ${productos}">
-            <td><p th:text="${producto.id}" /></td>
-            <td><p th:text="${producto.descripcion}" /></td>
-          <td class="d-flex justify-content-between align-items-center"> <p class="text-center">s/.</p> <p class="text-end" th:text="${producto.precio}" /> </p></td>
-          <td>
-            <img class="img-responsive" src="../static/catalogo/${producto.imageFileName}"  th:src="@{'/catalogo/'+${producto.imageFileName}}" style="width: 80px;"/>
-          </td>
-          <td> <p th:text="${producto.status}" /></td>
-          </tr>
-        </tbody>
 
-</table>
-</div>
-</div>
-</div>
+<!--                     ccccccccccccccccc-->
+<div class="container-fluid p-0 pb-5 principal-carta">
+  <div class="container-fluid">
+
+      <div class="logo-usu row" >
+          <div class="dropdown">
+              <button class="bot-usu border border-light btn mt-3 rounded-circle" type="button" id="dropdown1" data-toggle="dropdown">
+                  <img src="../img/logoUsuario.gif" class="img-fluid" alt="" >
+              </button>
+              <div class="dropdown-menu menu-usu">
+                <a class="dropdown-item " href="inicioSesion">Iniciar sesión</a>
+                <a class="dropdown-item" href="#">Crear cuenta</a>                          
+              </div>
+          </div>
+      </div> 
+
+      <div class="row logo-chamcha">
+          <a class="btn mt-3 rounded-circle" href="#" role="button">
+              <img src="../img/LOGO_RESTAURANTE.gif" alt="" >
+          </a>                
+      </div>
+
+  </div>
+
+  <div class="container-fluid categorias">
+      <div class="row">
+          <div class="col-lg-10">
+              <a class="btn col-lg-3 text-center text-light p-1 m-1 categoria" href="#fuentesFamiliares">
+                  <h5>Fuentes familiares</h5>
+              </a>
+              <a class="btn col-lg-3 text-center text-light p-1 m-1 categoria" href="#desayunos">
+                  <h5>Desayunos</h5>
+              </a>
+              <a class="btn col-lg-3 text-center text-light p-1 m-1 categoria" href="#empanadasPasteles" >
+                  <h5>Empanadas y pasteles</h5>
+              </a>
+              <a class="btn col-lg-3 text-center text-light p-1 m-1 categoria" href="#detalles">
+                  <h5>Los detalles para regalar</h5>
+              </a>
+              <a class="btn col-lg-3 text-center text-light p-1 m-1 categoria" href="#vitrinaDulce">
+                  <h5>Nuestra vitrina dulce</h5>
+              </a>
+              <a class="btn col-lg-3 text-center text-light p-1 m-1 categoria" href="#arroces">
+                  <h5>Arroces, guisos y saltados</h5>
+              </a>
+          </div>
+          <div class="col-lg-2 text-center">
+              <a class="btn col-lg-12 text-center text-light p-1 mt-3 categoria">
+                  <span>s./ 20.00</span>
+                  <img src="../img/carrito.gif" alt="">
+              </a>
+          </div>
+      </div>
+  </div>
+
+  <div class="container-fluid pb-5">
+      <div class="row" id="fuentesFamiliares">
+          <div class="col-8 col-md-4 m-5">
+              <img src="../img/etiquetaFuenteFamiliar.gif" alt="" class="w-100 h-100">
+          </div>                
+      </div>
+
+      <div class="row">                
+          <div class="col-sm-8 col-lg-5 mx-auto mt-5 text-center ">
+              <div class="container p-4 caja-comida">
+                  <div class="row">
+                      <div class="col-5">
+                          <img src="../img/comida1/Fuente de Aji de gallina para 2 personas.webp" alt="" class="w-100 h-100">
+                      </div>
+                      <div class="col-7 text-light">
+                          <h4>Fuente de Aji de gallina para 2 personas</h4>
+                          <a class="btn col-lg-8 text-center text-light p-1 mt-3 boton-caja">                                    
+                              <span>Agregar</span>                                    
+                              <span>s./ 20.00</span>                                    
+                          </a>
+                      </div>
+                  </div>
+              </div>                
+          </div>
+      </div>              
+
+      <div class="row" id="desayunos">
+          <div class="col-8 col-md-4 m-5">
+              <img src="../img/etiquetaDesayuno.gif" alt="" class="w-100 h-100">
+          </div>
+      </div>
+
+      <div class="row">
+          <div class="col-sm-8 col-lg-5 mx-auto mt-5 text-center ">
+              <div class="container p-4 caja-comida">
+                  <div class="row">
+                      <div class="col-5">
+                          <img src="../img/comida1/Fuente de Aji de gallina para 2 personas.webp" alt="" class="w-100 h-100">
+                      </div>
+                      <div class="col-7 text-light">
+                          <h4>Fuente de Aji de gallina para 2 personas</h4>
+                          <a class="btn col-lg-8 text-center text-light p-1 mt-3 boton-caja">                                    
+                              <span>Agregar</span>                                    
+                              <span>s./ 20.00</span>                                    
+                          </a>
+                      </div>
+                  </div>
+              </div>                
+          </div>  
+      </div>             
+
+      <div class="row" id="empanadasPasteles">
+          <div class="col-8 col-md-4 m-5">
+              <img src="../img/etiquetaEmpanadas.gif" alt="" class="w-100 h-100">
+          </div>
+      </div>
+
+      <div class="row">
+          <div class="col-sm-8 col-lg-5 mx-auto mt-5 text-center ">
+              <div class="container p-4 caja-comida">
+                  <div class="row">
+                      <div class="col-5">
+                          <img src="../img/comida1/Fuente de Aji de gallina para 2 personas.webp" alt="" class="w-100 h-100">
+                      </div>
+                      <div class="col-7 text-light">
+                          <h4>Fuente de Aji de gallina para 2 personas</h4>
+                          <a class="btn col-lg-8 text-center text-light p-1 mt-3 boton-caja">                                    
+                              <span>Agregar</span>                                    
+                              <span>s./ 20.00</span>                                    
+                          </a>
+                      </div>
+                  </div>
+              </div>                
+          </div>
+      </div>             
+
+      <div class="row" id="detalles">
+          <div class="col-8 col-md-4 m-5">
+              <img src="../img/etiquetaDetallesRegalo.gif" alt="" class="w-100 h-100">
+          </div>
+      </div>
+
+      <div class="row">
+          <div class="col-sm-8 col-lg-5 mx-auto mt-5 text-center ">
+              <div class="container p-4 caja-comida">
+                  <div class="row">
+                      <div class="col-5">
+                          <img src="../img/comida1/Fuente de Aji de gallina para 2 personas.webp" alt="" class="w-100 h-100">
+                      </div>
+                      <div class="col-7 text-light">
+                          <h4>Fuente de Aji de gallina para 2 personas</h4>
+                          <a class="btn col-lg-8 text-center text-light p-1 mt-3 boton-caja">                                    
+                              <span>Agregar</span>                                    
+                              <span>s./ 20.00</span>                                    
+                          </a>
+                      </div>
+                  </div>
+              </div>                
+          </div>                              
+      </div>
+      <div class="row" id="vitrinaDulce">
+          <div class="col-8 col-md-4 m-5">
+              <img src="../img/etiquetaVitrinaDulce.gif" alt="" class="w-100 h-100">
+          </div>
+      </div>
+
+      <div class="row">
+          <div class="col-sm-8 col-lg-5 mx-auto mt-5 text-center ">
+              <div class="container p-4 caja-comida">
+                  <div class="row">
+                      <div class="col-5">
+                          <img src="../img/comida1/Fuente de Aji de gallina para 2 personas.webp" alt="" class="w-100 h-100">
+                      </div>
+                      <div class="col-7 text-light">
+                          <h4>Fuente de Aji de gallina para 2 personas</h4>
+                          <a class="btn col-lg-8 text-center text-light p-1 mt-3 boton-caja">                                    
+                              <span>Agregar</span>                                    
+                              <span>s./ 20.00</span>                                    
+                          </a>
+                      </div>
+                  </div>
+              </div>                
+          </div>
+      </div> 
+
+      <div class="row" id="arroces">
+          <div class="col-8 col-md-4 m-5">
+              <img src="../img/etiquetaArroces.gif" alt="" class="w-100 h-100">
+          </div>
+      </div>
+                                  
+      <div class="row">
+          <div class="col-sm-8 col-lg-5 mx-auto mt-5 text-center ">
+              <div class="container p-4 caja-comida">
+                  <div class="row">
+                      <div class="col-5">
+                          <img src="../img/comida1/Fuente de Aji de gallina para 2 personas.webp" alt="" class="w-100 h-100">
+                      </div>
+                      <div class="col-7 text-light">
+                          <h4>Fuente de Aji de gallina para 2 personas</h4>
+                          <a class="btn col-lg-8 text-center text-light p-1 mt-3 boton-caja">                                    
+                              <span>Agregar</span>                                    
+                              <span>s./ 20.00</span>                                    
+                          </a>
+                      </div>
+                  </div>
+              </div>                
+          </div>
+      </div>
+      
+  </div>
+</div>  
+
+
+
+
+
 <div class="" style="margin-top:140px;"></div>
 
 

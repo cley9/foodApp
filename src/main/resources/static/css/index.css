@@ -1,0 +1,64 @@
+/* 
+-------------------------------------------------
+------------------PRINCIPAL UNO------------------
+-------------------------------------------------
+*/
+.principal-uno{
+    height: 100vh;
+}
+
+.logo-usu{
+    position: absolute;
+    right: 2rem;
+}
+
+button.bot-usu{
+    width: 54px; 
+    height: 54px;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, .6);
+}
+
+div.menu-usu{
+    margin-left: -100px;
+}
+
+.logo-chamcha{
+    width: 18.75rem;
+    height: 18.75rem;
+    background-color: rgba(0, 0, 0, .7);
+}
+
+.logo-chamcha img{
+    width: 77%;
+    height: 77%;
+}
+
+.input-direc{
+    background-color: transparent !important;
+}
+
+input.input-direc::placeholder{
+    color: white;
+}
+
+/* 
+-------------------------------------------------
+------------------PRINCIPAL DOS------------------
+-------------------------------------------------
+*/
+
+.principal-dos{
+    background-color: rgba(0, 0, 0, .7);
+}
+
+.img-deli img{
+    width: 77%;
+    height: 77%;
+}
+
+
+
+
+
+

@@ -1,0 +1,54 @@
+.principal-carta{
+    background-image: url(../img/ComplejoValleGrande.jpg);
+}
+
+.logo-usu{
+    position: absolute;
+    right: 2rem;
+}
+
+button.bot-usu{
+    width: 54px; 
+    height: 54px;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, .6);
+}
+
+div.menu-usu{
+    margin-left: -100px;
+}
+
+.logo-chamcha > a{ 
+    width: 100px; 
+    height: 100px;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, .6);
+}
+
+.logo-chamcha > a > img{
+    width: 90%;
+    height: 90%;
+}
+
+.categorias{
+    background-color: rgba(0, 0, 0, 0.67);
+}
+
+a.categoria{
+    border-radius: 26px;
+    background-color: rgba(212, 197, 197, 0.61);
+}
+
+.categoria > img{
+    width: 20px;
+    height: 20px;
+}
+
+.caja-comida{
+    background-color: rgba(52, 47, 47, 0.74);
+}
+
+a.boton-caja{
+    border-radius: 26px;
+    background-color: rgba(92, 81, 81, 1);
+}

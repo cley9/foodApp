@@ -1,5 +1,5 @@
 package edu.utp.chamcha.controller;
-
+import edu.utp.chamcha.model.Cupon;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
