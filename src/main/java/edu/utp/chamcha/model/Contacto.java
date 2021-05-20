@@ -26,10 +26,17 @@ public class Contacto{
     @NotNull
     private String name;
     @NotNull
-    private String email;
+    private String email;/*
     @NotNull
     private String phone; 
     @NotNull
-    private String reason; 
+    private String reason; */
+    @NotNull
+    private String direccion; 
+    @NotNull
+    private String apellido; 
+    @NotNull
+    private String password; 
+
   
 }
