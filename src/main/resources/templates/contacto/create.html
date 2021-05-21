@@ -2,77 +2,64 @@
 
 <html xmlns:th="https://www.thymeleaf.org" 
     th:replace="~{fragments/layout :: layout (~{::body},'contact')}">
+ <head>
+
+ </head>
 
 <body>
- 
-    <div class="container">
 
-        <div class="row">
-          <div class="col-sm-10 mt-5">
-            <div class="form-group row">
-              <h1>contacto</h1>
-            </div>
-            <form th:object="${contact}" th:action="@{/contacto/create}" method="post">
-              <div class="form-group row">
-                <div class="col-sm-2">
-                  <label for="name" style="color:blue">Name</label>
-                </div>
-                <div class="col-sm-2">
-                  <input type="text" th:field="*{name}" />
-                </div>
-              </div>
-              <div class="form-group row">
-                <div class="col-sm-2">
-                  <label for="email" style="color:blue">Email</label>
-                </div>
-                <div class="col-sm-2">
-                  <input type="text" data-inputmask="'alias': 'email'"
-                  autocomplete="off" th:field="*{email}" />
-                </div>
-              </div>
-              <div class="form-group row">
-                <div class="col-sm-2">
-                  <label for="phone" style="color:blue">Phone</label>
-                </div>
-                <div class="col-sm-2">
-                  <input type="text" data-inputmask="'mask': '(999) 999-9999'" th:field="*{phone}" />
-                </div>
-              </div>
-              <div class="form-group row">
-                <div class="col-sm-2">
-                  <label for="reason" style="color:blue"  >Reason</label>
-                </div>
-                <div class="col-sm-2">
-                  <textarea cols="22" rows="4" th:field="*{reason}" />
-                </div>
-              </div>              
-              <div class="form-group row">
-                <div class="col-sm-2"></div>
-                <div class="col-sm-2">
-                  <button th:with="text='Add Contact'" class="btn btn-primary" type="submit" th:text="${text}">Add
-                    Contact</button>
-                </div>
-              </div>
-            </form>
-            <p th:text="${mensaje}" />
-          </div>
-        </div>
-      </div>
-    
-      <script th:src="@{/webjars/jquery/jquery.min.js}"></script>
-      <script th:src="@{/webjars/jquery-ui/jquery-ui.min.js}"></script>
-      <script th:src="@{/webjars/bootstrap-datepicker/js/bootstrap-datepicker.min.js}"></script>
-      <script th:src="@{/webjars/jquery.inputmask/jquery.inputmask.min.js}"></script>    
+
+
+<br><br>
+  <div class="container pt-4">
+    <div class="row justify-content-center ">
   
-      <script>
-        $('.input-group.date').datepicker({
-          autoclose: true,
-          todayHighlight: true
-        });
-      </script>
-      <script>
-        $(":input").inputmask();
-      </script>
+      <div class="container pt-4 col-10 col-md-4 rounded-3 shadow shadow-lg p-3 mb-5 fond " >
+            <form th:object="${contact}" th:action="@{/contacto/create}" method="post">
+
+            <h4 class="text-center mb-3 text-light "> Registrar Datos </h4><hr class="my-2 bg-info mb-4">
+          
+
+              <div class="mb-3 ">
+                <input class="form-control p-2 mb-3 input-color fondo_inp"  th:field="*{name}" placeholder="Ingrese su Nombre">
+                <input class="form-control p-2 mb-3 input-color fondo_inp"  th:field="*{apellido}" placeholder="Ingrese su  Apellido">
+                
+                <input class="form-control p-2 mb-3 input-color fondo_inp"  th:field="*{email}" placeholder="Ingrese su Correo">
+                <input class="form-control p-2 mb-3 input-color fondo_inp"   th:field="*{direccion}"   placeholder="Ingrese su direccion" >
+                <input class="form-control p-2 mb-3 input-color fondo_inp" type="password"  th:field="*{password}" placeholder="Ingrese su Contraseña">
+                
+              </div>
+                <button th:with="text='Registrar'" class="btn-submit" type="submit" th:text="${text}">
+                  </button>
+                  
+          </form>
+      </div>
+
+  
+    </div>
+    <div class="container pt-4 ">
+      <div class="row text-center align-items-center justify-content-center ">
+          <div class="container col-10 col-md-4  rounded-3 shadow" style=" background-color: rgb(116, 112, 112);">
+               <div class="row">
+  
+                      <div class=" col-12 text-center pt-4">
+        <p th:text="${mensaje}" />
+                        
+
+                      </div>
+                      <div class="col-12 justify-content-between align-items-center pt-4 mb-3">
+                          <a href="" class="text-left btn btn-warning ">regresar</a>
+                          
+                      </div>
+  
+              </div>
+          </div>
+           
+      </div>
+  </div>
+  </div>
+
+
 </body>
 
 </html>

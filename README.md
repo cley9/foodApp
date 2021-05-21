@@ -1,0 +1,15 @@
+
+<!--mensajes que emitira al registrar o actualizar:
+   USUARIO ACTUALIZADO CON EXITO
+USUARIO ELIMINADO CON EXITO
+USUARIO CREADO CON EXITO
+
+   REGRESAR
+   -------------------------------------- >
+
+   PRODUCTO AGREGADO CON EXITO
+   PRODUCTO ACTUALIZADO CON EXITO.
+   PRODUCTO ELIMINADO CON EXITO.
+
+
+-->
