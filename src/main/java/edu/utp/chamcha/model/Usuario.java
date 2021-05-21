@@ -15,15 +15,10 @@ import lombok.*;
 @Table(name = "t_user")
 public class Usuario {
     @Id
-    @Column(name = "user_id")/*para qe salgan iguales */
-    private String userID;
+    @Column(name = "user_id")
+    private String email;
+    private String nombre;
     private String password;
-    public Object getPassword() {
-        return null;
-    }
-    public String getUserID() {
-        return null;
-    }
 
 
 }

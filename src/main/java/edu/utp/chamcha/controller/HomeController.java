@@ -11,7 +11,7 @@ public class HomeController {
     private static final String HOME_INDEX ="welcome"; 
 
     @GetMapping("/")
-    public String index(Model model) {
+    public String index() {
         return HOME_INDEX;
     }
 }

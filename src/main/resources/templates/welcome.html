@@ -1,9 +1,112 @@
 <!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+</head>
+<body>    
+    <div class="container-fluid pb-5" style="background-image: url(img/ComplejoValleGrande.jpg);">
+        <div class="container principal-uno">
 
-<html xmlns:th="https://www.thymeleaf.org" th:replace="~{fragments/layout :: layout (~{::body},'home')}">
+            <div class="logo-usu row" >
+                <div class="dropdown">
+                    <button class="bot-usu border border-light btn mt-3 rounded-circle" type="button" id="dropdown1" data-toggle="dropdown">
+                        <img src="img/logoUsuario.gif" class="img-fluid" alt="" >
+                    </button>
+                    <div class="dropdown-menu menu-usu">
+                      <a class="dropdown-item " href="/usuario/login">Iniciar sesión</a>
+                      <a class="dropdown-item" href="/cliente/create">Crear cuenta</a>                          
+                    </div>
+                </div>
+            </div> 
+        
+            <div class="row">
+                <div class="col-lg-4 mt-4 mx-auto">
+                    <div class="logo-chamcha mx-auto text-center rounded-circle">                        
+                        <img src="img/LOGO_RESTAURANTE.gif" alt="">
+                    </div>
+                </div>
+            </div>
+    
+            <div class="row">
+                <div class="col-lg-4 text-light mx-auto mt-5 text-center">
+                    <h3>¡PIDE AHORA!</h3>
+                </div>
+            </div>
+    
+            <div class="row">
+                <div class="col-6 col-lg-3 mx-auto mt-4 text-light">
+                    <input type="text" class="input-direc form-control text-light" placeholder="Dirección de entrega" aria-label="Username" aria-describedby="basic-addon1">
+                </div>
+            </div>
+    
+            <div class="row">
+                <div class="col-7 col-lg-4 mx-auto mt-5">
+                    <button type="button" class="btn btn-outline-light w-100">Pedir</button>
+                </div>
+            </div>
+        </div>
 
-<body>
- 
+        <div class="container principal-dos pb-4">
+
+            <div class="row">
+                <div class="col-lg-4 mt-4 mx-auto text-center img-deli">                    
+                        <img src="img/deliveryPersona.jpg" alt="">                    
+                </div>
+                <div class="col-lg-4 text-light mt-4 mx-auto text-center">
+                    <h2>Delivery que satisface tus sentidos</h2>
+                    <p>
+                        Sabermos que la hora de la comida es un momento para compartir,por eso queremos llevar a tu mesa, tu comida favorita directamente desde uno de los mejores restaurantes. Ingresa tu direccion, selecciona tu comida favorita y disfruta de los mas ricos sabores que tenemos para ti ¡No te quedes con las ganas!
+                    </p>                    
+                </div>
+            </div>
+    
+            <div class="row">
+                <div class="col-sm-4 col-lg-3 mx-auto mt-5 text-center">
+                    <a class="btn " href="#" role="button">
+                        <img src="img/comida1Fuentes familiares.webp" alt="" class="w-100 h-100">
+                    </a>                      
+                </div>
+                <div class="col-sm-4 col-lg-3 mx-auto mt-5 text-center">
+                    <a class="btn " href="#" role="button">
+                        <img src="img/comida2Desayunos.webp" alt="" class="w-100 h-100">
+                    </a>                      
+                </div>
+                <div class="col-sm-4 col-lg-3 mx-auto mt-5 text-center">
+                    <a class="btn " href="#" role="button">
+                        <img src="img/comida3Empanadas y pasteles.webp" alt="" class="w-100 h-100">
+                    </a>                      
+                </div>               
+            </div>
+            <div class="row">                
+                <div class="col-sm-4 col-lg-3 mx-auto mt-5 text-center">
+                    <a class="btn " href="#" role="button">
+                        <img src="img/comida4Los detalles para regalar.webp" alt="" class="w-100 h-100">
+                    </a>                      
+                </div>
+                <div class="col-sm-4 col-lg-3 mx-auto mt-5 text-center">
+                    <a class="btn " href="#" role="button">
+                        <img src="img/comida5Nuestra vitrina dulce.webp" alt="" class="w-100 h-100">
+                    </a>                      
+                </div>
+                <div class="col-sm-4 col-lg-3 mx-auto mt-5 text-center">
+                    <a class="btn " href="#" role="button">
+                        <img src="img/comida6Arroces guisos y saltados.webp" alt="" class="w-100 h-100">
+                    </a>                      
+                </div>
+            </div>                
+        </div>
+    </div>
+
+    <div th:replace="Fragments/footer :: footer"></div> 
+
+      <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </body>
-
 </html>

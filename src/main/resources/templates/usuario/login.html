@@ -1,60 +1,120 @@
 <!DOCTYPE html>
-<!---prueba no mas es -->
-<html xmlns:th="https://www.thymeleaf.org" 
-    th:replace="~{fragments/layout :: layout (~{::body},'login')}">
-
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/inicioSesion.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+</head>
 <body>
- 
-    <div class="container">
 
-        <div class="row">
-          <div class="col-sm-10 mt-5">
-            <div class="form-group row">
-              <h1>Login</h1>
+     <div class="container-fluid bg-primary fondo">
+        <div class="container principal-sesion">
+
+            <div class="logo-usu row" >
+                <div class="dropdown">
+                    <button class="bot-usu border border-light btn mt-3 rounded-circle" type="button" id="dropdown1" data-toggle="dropdown">
+                        <img src="../img/logoUsuario.gif"  class="img-fluid" alt="" >
+                    </button>
+                    <div class="dropdown-menu menu-usu">
+                      <a class="dropdown-item " href="/usuario/login">Iniciar sesión</a>
+                      <a class="dropdown-item" href="/cliente/create">Crear cuenta</a>                          
+                    </div>
+                </div>
+            </div> 
+            
+            <div class="row logo-chamcha">
+                <a class="btn mt-3 rounded-circle" href="/" role="button">
+                    <img src="../img/LOGO_RESTAURANTE.gif" alt="" class="w-100 h-100">
+                </a>                
             </div>
-            <form th:object="${user}" th:action="@{/usuario/login}" method="post">
-              <div class="form-group row">
-                <div class="col-sm-2">
-                  <label for="userID" style="color:blue">User</label>
+        
+            <div class="row">
+                <div class="col-lg-4 mt-4 mx-auto">
+                    <div class="mx-auto text-center rounded-circle logo-sesion">
+                        <img src="../img/logoUsuario.gif" class="mt-5">
+                    </div>
                 </div>
-                <div class="col-sm-2">
-                  <input type="text" th:field="*{userID}" />
+            </div>
+    
+            <div class="row">
+                <div class="col-lg-4 text-light mx-auto mt-2 text-center">
+                    <h3>USUARIO</h3>
                 </div>
-              </div>
-              <div class="form-group row">
-                <div class="col-sm-2">
-                  <label for="password" style="color:blue">Password</label>
+            </div>
+    
+            <form  th:object="${user}" th:action="@{/usuario/login}" method="post">
+                <div class="row">
+                    <div class="col-6 col-lg-3 mx-auto mt-4 text-light">
+                        <input type="email" th:field="*{email}" class="input-direc form-control text-light" placeholder="Ingrese correo" aria-label="Username" aria-describedby="basic-addon1">
+                    </div>
                 </div>
-                <div class="col-sm-2">
-                  <input type="password" th:field="*{password}" />
+    
+                <div class="row">
+                    <div class="col-6 col-lg-3 mx-auto mt-4 text-light">
+                        <input type="password" th:field="*{password}" class="input-direc form-control text-light" placeholder="Ingrese contraseña" aria-label="Username" aria-describedby="basic-addon1">
+                    </div>
                 </div>
-              </div>              
-              <div class="form-group row">
-                <div class="col-sm-2"></div>
-                <div class="col-sm-2">
-                  <button th:with="text='Login'" class="btn btn-primary" type="submit" th:text="${text}"/>
+                <div class="row">
+                    <div class="col-7 col-lg-4 mx-auto mt-5">
+                        <button th:with="text='Ingresar'" class="btn btn-outline-light w-100" type="submit" th:text="${text}"/>                        
+                    </div>
                 </div>
-              </div>
             </form>
-            <p th:text="${mensaje}" />
+            <p th:text="${mensaje}" class="text-white"/>
+                
+        </div>
+     </div>
+
+
+
+
+     <footer class="pt-4" style="background-color:#2D2E2B;">
+        <div class="container text-muted">
+          <div class="row ">
+            <div class="col-7 col-md ">
+                <a class="navbar-brand" href="#"><img src="../img/LOGO_RESTAURANTE.gif" class="img-fluid " width="130px" height="80px" alt=""></a>
+      
+            </div>
+            <div class="col-4 col-md ">
+                <h5>Contáctanos</h5>
+               
+            </div>
+            <div class="col-7 col-md ">
+                <h5>Nosotros</h5>
+               
+            </div>
+            <div class="col-4 col-md ">
+              <h5 >Redes Sociales</h5>
+      
+              <div class="">
+                  <a class=""href="#" style=" color:#070707; font-size:40px;"  ><i class="bi bi-whatsapp c"></i></a>
+      
+                  <a class=""href="#" style=" color:#070707; font-size:40px;"  ><i class="bi bi-facebook c"></i></a>
+                  <a class=""href="#" style=" color:#070707; font-size:40px;"  ><i class="bi bi-instagram c"></i></a>
+      
+                  </div>
+              
+          </div>
+      
+          
+          <div class="row">
+            <div class="text-center ">
+              <small class="d-block mb-3 text-muted h6"> ©2021 copyright La Chamcha  </small>
+            </div>
           </div>
         </div>
-      </div>
-    
-      <script th:src="@{/webjars/jquery/jquery.min.js}"></script>
-      <script th:src="@{/webjars/jquery-ui/jquery-ui.min.js}"></script>
-      <script th:src="@{/webjars/bootstrap-datepicker/js/bootstrap-datepicker.min.js}"></script>
-      <script th:src="@{/webjars/jquery.inputmask/jquery.inputmask.min.js}"></script>    
-  
-      <script>
-        $('.input-group.date').datepicker({
-          autoclose: true,
-          todayHighlight: true
-        });
-      </script>
-      <script>
-        $(":input").inputmask();
-      </script>
-</body>
+        </div>
+      </footer>
 
+
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    
+</body>
 </html>

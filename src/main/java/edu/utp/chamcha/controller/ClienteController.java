@@ -25,15 +25,15 @@ public class ClienteController {
         ){
         this.clientsData = clientsData;
         this.usuariosData = usuariosData;
-    }      
-
-    @GetMapping("/cliente/create")
-    public String index(Model model) {
-        model.addAttribute(MODEL_CONTACT, new Cliente());
-        return INDEX;
     }    
+    
+    @GetMapping("cliente/create")
+    public String index(Model model){
+        model.addAttribute(MODEL_CONTACT,new Cliente());    
+        return INDEX;
+    }
 
-    @PostMapping("/cliente/create")
+    @PostMapping("cliente/create")
     public String createSubmitForm(Model model, 
         @Valid Cliente objCliente, BindingResult result ){
         if(result.hasFieldErrors()) {
