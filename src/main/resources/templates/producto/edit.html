@@ -4,96 +4,101 @@
     th:replace="~{fragments/layout :: layout (~{::body},'producto')}">
 
 <body>
- 
-    <div class="container">
 
-        <div class="row">
-          <div class="col-sm-10 mt-5">
-            <div class="form-group row">
-              <h1>Producto</h1>
+
+
+  <div class="container pt-4 ">
+    <div class="row  justify-content-center ">
+          <div class=" col-12 col-md-8 align-items-center justify-content-center rounded-3 shadow bg-light">
+   
+          <h3 class="text-center pt-4">Nuevo Producto</h3><hr class="">
+
+          <form class="  container-flud "  th:object="${producto}" th:action="@{/producto/edit}" method="post">
+          
+            <input type="hidden" th:field="*{id}"/>
+         
+            <div class=" d-flex justify-content-between align-items-center pt-3">
+              <div class="col-6 mb-3">
+                <label for="exampleInputEmail1" class="form-label">Nombre del menu</label>
+                <input type="text"  class="form-control" th:field="*{menu}" id="exampleInputEmail1" >
+              </div>
+              <div class="col-4 mb-3">
+                <label for="exampleInputPassword1" class="form-label">Precio</label>
+                <input type="text" class="form-control" th:field="*{Precio}"  id="exampleInputPassword1">
+              </div>
             </div>
-            <form th:object="${producto}" th:action="@{/producto/edit}" method="post">
+            <div class="d-flex justify-content-between align-items-center  mb-3">
+              <div class="col-6 mb-0 pt-3">
+                <label for="exampleInputEmail1" class="form-label">Descripcion</label>
 
-              <input type="hidden" th:field="*{id}"/>
+               
+                <textarea name="name" type="text" th:field="*{descripcion}" rows="3" cols="43" class="form-control"></textarea>
+              </div>
+              <div class="col-4 mb-4">
+                <label for="exampleInputPassword1" class="form-label">Stock</label>
+        
+                <input type="text" class="form-control" th:field="*{stock}"  id="exampleInputPassword1">
 
-              <div class="form-group row">
-                <div class="col-sm-2">
-                  <label for="descripcion">Descripcion</label>
-                </div>
-                <div class="col-sm-2">
-                  <input type="text" th:field="*{descripcion}" />
-                </div>
+<!----
+                <input type="text" class="form-control" id="dueDate"
+               data-inputmask="'alias': 'datetime', 'inputFormat': 'dd/mm/yyyy'"
+               autocomplete="off" th:field="*{dueDate}" />-->
+               
               </div>
-              <div class="form-group row">
-                <div class="col-sm-2">
-                  <label for="precio">Precio</label>
-                </div>
-                <div class="col-sm-2">
-                    <input type="text" th:field="*{Precio}" />
-                </div>
+            </div>
+            <div class=" d-flex justify-content-between align-items-center  ali  ">
+              <div class=" col-5 mb-3">
+                <label for="formFileSm" class="form-label">Selecciones imagen</label>
+            
+              <input type="text" class="form-control" id="exampleInputPassword1" th:field="*{imageFileName}">
+
+              
               </div>
-              <div class="form-group row">
-                <div class="col-sm-2">
-                  <label for="dueDate">Due Date</label>
-                </div>
-                <div class="col-sm-3">
-                  <div class="input-group date">
-                    <input type="text" class="form-control" id="dueDate" 
-                      data-inputmask="'alias': 'datetime', 'inputFormat': 'dd/mm/yyyy'" 
-                      autocomplete="off" th:field="*{dueDate}" />
-                    <div class="input-group-append">
-                      <span class="input-group-text"><i class="far fa-calendar-alt"></i></span>
-                    </div>
-                  </div>
-                </div>
+              <div class="col-4 mb-3 ">
+                <label for="exampleInputPassword1" class="form-label">Categoria</label>
+                 <input type="text" class="form-control" th:field="*{status}"  id="exampleInputPassword1">
               </div>
-              <div class="form-group row">
-                <div class="col-sm-2">
-                  <label for="imageFileName">File Name</label>
-                </div>
-                <div class="col-sm-2">
-                  <input type="text" th:field="*{imageFileName}" />
-                </div>
-              </div>    
-              <div class="form-group row">
-                <div class="col-sm-2">
-                  <label for="status">Status</label>
-                </div>
-                <div class="col-sm-2">
-                  <select id="status" placeholder="status" autocomplete="off" class="form-control"
-                    th:field="*{status}">
-                    <option value="-">None</option>
-                    <option value="A">Active</option>
-                    <option value="I">Inactive</option>
-                  </select>
-                </div>
-              </div>                        
-              <div class="form-group row">
-                <div class="col-sm-2"></div>
-                <div class="col-sm-2">
-                  <button th:with="text='Edit Producto'" class="btn btn-primary" type="submit" th:text="${text}"/>
-                </div>
-              </div>
-            </form>
-            <p th:text="${mensaje}" />
-          </div>
+            </div>
+
+
+
+                 <div class="text-center pt-4 mb-4">
+                   <button th:with="text='Edit Producto'" class="btn btn-success" type="submit" th:text="${text}"/>
+
+                 </div>
+          </form>
         </div>
-      </div>
-    
-      <script th:src="@{/webjars/jquery/jquery.min.js}"></script>
-      <script th:src="@{/webjars/jquery-ui/jquery-ui.min.js}"></script>
-      <script th:src="@{/webjars/bootstrap-datepicker/js/bootstrap-datepicker.min.js}"></script>
-      <script th:src="@{/webjars/jquery.inputmask/jquery.inputmask.min.js}"></script>    
+
+    </div>
+
+    <div class="container pt-4 ">
+      <div class="row text-center align-items-center justify-content-center ">
+          <div class="container col-10 col-md-4  rounded-3 shadow" style=" background-color: rgb(116, 112, 112);">
+               <div class="row">
   
-      <script>
-        $('.input-group.date').datepicker({
-          autoclose: true,
-          todayHighlight: true
-        });
-      </script>
-      <script>
-        $(":input").inputmask();
-      </script>
+                      <div class=" col-12 text-center pt-4">
+                        <p th:text="${mensaje}" />
+
+                      </div>
+                      <div class="col-12 justify-content-between align-items-center pt-4 mb-3">
+                          <a href="" class="text-left btn btn-warning ">regresar</a>
+                          
+                      </div>
+  
+              </div>
+          </div>
+           
+      </div>
+  </div>
+
+
+  </div>
+
+
+
+  
+
+
 </body>
 
 </html>

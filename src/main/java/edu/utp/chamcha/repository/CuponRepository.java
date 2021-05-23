@@ -16,7 +16,13 @@ public interface CuponRepository extends JpaRepository<Cupon, Integer>{
     
     @Query(value = "SELECT o FROM Producto o WHERE o.status='A'")
     List<Producto> getAllActiveProductos();
+
+        @Query(value = "SELECT o FROM Producto o WHERE o.status='A'")
+    List<Producto> getAllActiveProductos();
      */
+    
+
+
 }
 
 

@@ -3,11 +3,15 @@ package edu.utp.chamcha.model;
 
 import javax.validation.constraints.NotNull;
 
+import java.math.BigDecimal;
+import java.util.Date;
 import javax.persistence.Entity;
 import javax.persistence.Table;
 import javax.persistence.Id;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 
 import lombok.*;
 
@@ -23,20 +27,12 @@ public class Contacto{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id;
-    @NotNull
     private String name;
-    @NotNull
-    private String email;/*
-    @NotNull
-    private String phone; 
-    @NotNull
-    private String reason; */
-    @NotNull
+    private String email;
     private String direccion; 
-    @NotNull
     private String apellido; 
-    @NotNull
     private String password; 
 
   
 }
+

@@ -21,6 +21,7 @@
                     </button>
                     <div class="dropdown-menu menu-usu">
                       <a class="dropdown-item " href="/usuario/login">Iniciar sesión</a>
+                      <a class="dropdown-item" href="/administrador/login">Administrador</a>
                       <a class="dropdown-item" href="/cliente/create">Crear cuenta</a>                          
                     </div>
                 </div>
@@ -72,43 +73,7 @@
 
 
 
-     <footer class="pt-4" style="background-color:#2D2E2B;">
-        <div class="container text-muted">
-          <div class="row ">
-            <div class="col-7 col-md ">
-                <a class="navbar-brand" href="#"><img src="../img/LOGO_RESTAURANTE.gif" class="img-fluid " width="130px" height="80px" alt=""></a>
-      
-            </div>
-            <div class="col-4 col-md ">
-                <h5>Contáctanos</h5>
-               
-            </div>
-            <div class="col-7 col-md ">
-                <h5>Nosotros</h5>
-               
-            </div>
-            <div class="col-4 col-md ">
-              <h5 >Redes Sociales</h5>
-      
-              <div class="">
-                  <a class=""href="#" style=" color:#070707; font-size:40px;"  ><i class="bi bi-whatsapp c"></i></a>
-      
-                  <a class=""href="#" style=" color:#070707; font-size:40px;"  ><i class="bi bi-facebook c"></i></a>
-                  <a class=""href="#" style=" color:#070707; font-size:40px;"  ><i class="bi bi-instagram c"></i></a>
-      
-                  </div>
-              
-          </div>
-      
-          
-          <div class="row">
-            <div class="text-center ">
-              <small class="d-block mb-3 text-muted h6"> ©2021 copyright La Chamcha  </small>
-            </div>
-          </div>
-        </div>
-        </div>
-      </footer>
+     <div th:replace="Fragments/footer :: footer"></div> 
 
 
 

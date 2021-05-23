@@ -13,4 +13,5 @@ public interface  ProductoRepository extends JpaRepository<Producto, Integer>{
 
     @Query(value = "SELECT o FROM Producto o WHERE o.status='A'")
     List<Producto> getAllActiveProductos();
+
 }

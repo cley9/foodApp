@@ -1,11 +1,4 @@
-<!--<!DOCTYPE html>
-
-<html xmlns:th="https://www.thymeleaf.org" 
-    th:replace="~{fragments/layout :: layout (~{::body},'contacto')}">
-
-
-<body>-->
-    <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -51,56 +44,19 @@
 
         
             <!-- TABLA -->
+            
+        
+            
 
-  <div class="container"><br>
-    <div class="row">
-      <a href="/contacto/create" class="btn btn-success">Create</a>
+          
+    </div>  
 
-          <div class="col-md-12">
-                <table class="table table-bordered rounded-3 text-center table-hover">
-          <thead class="table-dark">
-          <th>id</th>
-          <th>Nombre</th>
-          <th>Apellido</th>
-          <th>Dirreccion</th>
-          <th>gmail</th>
-          <th>password</th>
-          <th>Accion</th>
-          </thead>
-          <tbody>
-            <tr class="text-light"   th:each="contacto : ${contacto}">
-
-              <td><p th:text="${contacto.id}" /></td>
-              <td><p th:text="${contacto.name}" /></td>
-              <td><p th:text="${contacto.apellido}" /></td>
-              <td><p th:text="${contacto.direccion}" /></td>
-            <td> <p th:text="${contacto.email}" /></td>
-            <td> <p th:text="${contacto.password}" /></td>
-            <td>
-               
-                <a th:href="@{'/contacto/edit/__${contacto.id}__'}"  class="btn btn-info" role="button">Edit</a>
-                <a href=""> Eliminar</a>  
-              </td>
-            </tr>
-          </tbody>
-  
-  </table>
-  </div>
-  </div>
-  </div>
+    <div th:replace="Fragments/footer :: footer"></div> 
+    
 
 
-
-
-
-</div>  
-
-<div th:replace="Fragments/footer :: footer"></div> 
-
-
-
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </body>
 </html>

@@ -27,9 +27,9 @@
         <th>Fecha</th>
         </thead>
         <tbody>
-          <tr class="text-light"   th:each="producto : ${productos}">
+         <tr class="text-light"   th:each="producto : ${productos}">
             <td><p th:text="${producto.id}" /></td>
-            <td><p th:text="${producto.descripcion}" /></td>
+            <td><p th:text="${producto.menu}" /></td>
           <td class="d-flex justify-content-between align-items-center"> <p class="text-center">s/.</p> <p class="text-end" th:text="${producto.precio}" /> </p></td>
           <td>
             <img class="img-responsive" src="../static/catalogo/${producto.imageFileName}"  th:src="@{'/catalogo/'+${producto.imageFileName}}" style="width: 80px;"/>

@@ -56,9 +56,9 @@ public class ProductoController {
         }
         return VIEW_CREATE;
     }
-
+/*
     @GetMapping("/producto/edit/{id}")
-    public String edit(@PathVariable("id") int id, 
+    public String edit(@PathVariable("id") Integer id, 
         Model model){
         Producto producto = this.productsData.getOne(id);
         model.addAttribute(MODEL_PRODUCTO, producto);
@@ -76,6 +76,27 @@ public class ProductoController {
 		this.productsData.save(objProducto);
 		return VIEW_INDEX;
 	}
+    */
+    @GetMapping("/producto/edit/{id}")
+    public String edit(@PathVariable("id") Integer id, 
+        Model model){
+        Producto producto = this.productsData.getOne(id);
+        model.addAttribute(MODEL_PRODUCTO, producto);
+        return VIEW_EDIT;
+    }  
+
+    @PostMapping("/producto/edit")
+	public String update(
+			@Valid Producto objProducto,
+			BindingResult bindingResult
+			){
+		if(bindingResult.hasFieldErrors()) {
+			return "redirect:/producto/edit/{id}";
+		}
+		this.productsData.save(objProducto);
+		return VIEW_INDEX;
+	}
+
 
 }
 

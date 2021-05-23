@@ -22,6 +22,9 @@ public class Cupon {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String codigo_cupon;
+    /*
     @Temporal(TemporalType.DATE)
-    private Date dueDate;
+    private Date dueDate;*/
 }
+
+
